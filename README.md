@@ -26,7 +26,8 @@ We can then add the basic configuration to get it up and running
 Vagrant.configure("2") do |config|
 
 # creating an ubuntu virtual machine 
-  config.vm.box = "ubuntu/xenial64"
+# In this case we have used this box as it is 20-04 and it makes virtual environments easier to create
+  config.vm.box = "bento/ubuntu-20.04"
 
 # Creating a private ip to access our nginx web server
   config.vm.network "private_network", ip: "192.168.10.200"
@@ -63,6 +64,8 @@ sudo apot-get install nginx -y
 
 echo "nginx successfully installed"
 ```
+We will add to this bash script later when we attempt to automate running our flask application
+
 In order for file to run, we would need to first snyc the VM directory with our OS directory and
 then run this file. We will use the below code to do this by adding it to our vagrant file
 
@@ -71,3 +74,55 @@ app.vm.synced_folder "app", "/home/ubuntu/app"
 # the below code run 
 app.vm.provision "shell", path: "environment/app/provision.sh", privileged: false
 ```
+
+
+### Adding the flask application to the vagrant folder
+
+- In order to move the folder into the vagrant folder we run the following command
+
+```commandline
+mv C:\Users\aosbo\PycharmProjects Flask-App C:\Users\aosbo\VagrantProjects\Flask-With-Vagrant\app
+```
+
+```
+cd /home/ubuntu/app
+```
+This command will take us to our app folder in our VM, once here we will download the dependencies needed for us to
+use python
+```commandline
+
+```
+
+
+Once within the VM synced app, we can now run the commands to create a virtual environment
+
+
+
+
+```
+python3 --version
+```
+This is to ensure python has been downloaded
+
+```commandline
+sudo apt-get install python3-pip
+```
+pip is a python 3 module which we installed above
+
+
+
+While still inside the virtual environment we created, we can now download all the dependencies that we would need to run our app
+
+```commandline
+python3 -m pip install flask
+python3 -m pip install flask-login
+python3 -m pip install flask-sqlalchemy
+```
+We now navigate back into the app folder and run the following commands
+```commandline
+export FLASK_APP=project
+python3 -m flask run
+```
+
+python3 is the software, -m refers to the module, and the module we have chosen to install is flask
+
