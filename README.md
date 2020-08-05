@@ -91,13 +91,14 @@ This command will take us to our app folder in our VM, once here we will downloa
 use python
 ```commandline
 
+sudo apt-get install python3-venv
+python3 -m venv tutorial-env # this creates our Virtual Environment
 ```
 
-
-Once within the VM synced app, we can now run the commands to create a virtual environment
-
-
-
+We can now run the commands to create a virtual environment
+```commandline
+python3 -m venv tutorial-env # this creates our Virtual Environment
+```
 
 ```
 python3 --version
@@ -120,9 +121,12 @@ python3 -m pip install flask-sqlalchemy
 ```
 We now navigate back into the app folder and run the following commands
 ```commandline
+sudo python3 -m pip install flask
 export FLASK_APP=project
-python3 -m flask run
+python3 -m flask run -h 0.0.0.0
 ```
 
 python3 is the software, -m refers to the module, and the module we have chosen to install is flask
+
+try do pip install requirements.txt
 
