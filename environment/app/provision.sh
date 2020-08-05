@@ -21,10 +21,30 @@ echo "server{
 
 sudo service nginx restart
 
+# Directing to the synced app folder
+cd /home/ubuntu/app
+
 # Installing Python Virtual Environment
-sudo apt-get install python3.8-venv
+sudo apt-get install python3.8-venv -y
 
 # Creating the virtual environment
 sudo python3.8 -m venv env
 
-echo "nginx successfully installed"
+#Updating all the installations
+sudo apt-get update -y
+
+# Installing pip
+sudo apt-get install python3-pip -y
+
+# Installing Flask
+python3 -m pip install flask
+
+#Installing FLask-login
+python3 -m pip install flask-login
+#Installing flask sqlalchemy
+python3 -m pip install flask-sqlalchemy
+
+#Running Flask application
+
+export FLASK_APP=project
+python3 -m flask run -h 0.0.0.0

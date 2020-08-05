@@ -96,7 +96,6 @@ use python
 ```commandline
 
 sudo apt-get install python3-venv
-python3 -m venv tutorial-env # this creates our Virtual Environment
 ```
 
 We can now run the commands to create a virtual environment
@@ -110,7 +109,7 @@ python3 --version
 This is to ensure python has been downloaded
 
 ```commandline
-sudo apt-get install python3-pip
+sudo apt-get install python3-pip -y
 ```
 pip is a python 3 module which we installed above
 
