@@ -16,7 +16,19 @@ Please ensure you have the following software's downloaded
 
 As we are creating the Application inside our VM, there is no need to have python or flask downloaded locally
 
+## Cloning The Repository
+Clone the repository by clicking on the button displayed below, this will download a zip file onto your local PC
+
+![Zip Download](images/downloading-zip.png)
+
+After we have extracted the folder and placed it in the folder we would like, we would then enter the folder
+through git bash
+
+![Opening Bash](images/opening-bash.gif)
+
+
 ## Prerequisite Check
+Within the folder, run the below commands to ensure we have downloaded the correct versions of each software
 - ```vagrant --version```
 - ```ruby --version```
 
