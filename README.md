@@ -10,6 +10,10 @@ This repo will bring together many of the concepts that have previously been tou
 ## Prerequisites for this Project
 
 
+### Why We Use Dev Environments To Tests Applications
+
+
+
 ### Creating Our Vagrant File
 We will create a folder named 'Flask-With-Vagrant' and enter this folder using git bash. Once here we create a vagrant
 file and then enter it
@@ -128,5 +132,9 @@ python3 -m flask run -h 0.0.0.0
 
 python3 is the software, -m refers to the module, and the module we have chosen to install is flask
 
-try do pip install requirements.txt
+
+# try do pip install requirements.txt
+# Add reverse proxy configuration to default file just like the project we've just done
+# Automate all these commands using bash scripts
+
 
