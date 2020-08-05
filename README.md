@@ -4,6 +4,9 @@
 In this project we will use Mode View Controller To project our code onto a web browser, instead of running the app
 within our Operating System, we will create a DEV environment using linux and run our Flask App here
 
+For an in-depth explanation of the steps carried out, please refer to the detail-notes markdown file which is linked 
+[Here](https://github.com/aosborne17/Flask-With-Vagrant/blob/master/DETAILED-NOTES.md
+)
 ## Prerequisites
 Please ensure you have the following software's downloaded
 
